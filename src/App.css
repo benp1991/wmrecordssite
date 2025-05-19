@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.Header-Links {
+  color: #fdfdfd;
+  margin-right: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,8 +20,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  min-height: 10vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -36,3 +40,87 @@
     transform: rotate(360deg);
   }
 }
+
+table {
+  margin: auto;
+}
+table, th, tr, td {
+  border: 1px solid black;
+  color: solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 30px
+}
+th {
+  background-color: #B8CCE4;
+  font-size: 20px;
+}
+td {
+  text-align: center;
+}
+
+.record_selector{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.record_table{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  min-height:200px;
+}
+
+.default_cell{
+  width: 90px;
+}
+.name_cell{
+  width: 300px;
+}
+.location_cell{
+  width: 400px;
+}
+
+input, select {
+  color: solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+label, button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+}
+button {
+  background-color: #B8CCE4;
+  font-size: 20px;
+}
+
+.header-logo{
+  float:right;
+}
+
+.record_detail{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section_footer{
+  position: absolute;
+  bottom: 20px;
+}
+/*
+
+.section_header{
+    font-size: 30px;
+    }
+
+
+
+.record_history{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
+*/
