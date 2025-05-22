@@ -35,7 +35,7 @@ function RecordSelector(props) {
 
     return (
         <div className="record_selector">
-            <label>Lift :</label>
+            <label htmlFor='Lift'>Lift :</label>
             <select name="Lift" id="Lift" value={lift} onChange={e => setLift(e.target.value)}>
                 <option value="">Select</option>
                 <option value="Squat">Squat</option>
@@ -43,18 +43,18 @@ function RecordSelector(props) {
                 <option value="Deadlift">Deadlift</option>
                 <option value="Total">Total</option>
             </select>
-            <label>Gender :</label>
+            <label htmlFor='Gender'>Gender :</label>
             <select name="Gender" id="Gender" value={gender} onChange={e => handleGenderChange(e.target.value, setGender)}>
                 <option value="">Select</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
-            <label>Weight Class :</label>
+            <label htmlFor='WeightClass'>Weight Class :</label>
             <select name="WeightClass" id="WeightClass" value={weightClass} onChange={e => setWeightClass(e.target.value)}>
                 <option value="">Select</option>
                 {weightClasses}
             </select>
-            <label>Equipment :</label>
+            <label htmlFor='Equipment'>Equipment :</label>
             <select name="Equipment" id="Equipment" value={equipment} onChange={e => setEquipment(e.target.value)}>
                 <option value="">Select</option>
                 <option value="Sleeves">Sleeves</option>
