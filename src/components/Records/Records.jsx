@@ -5,7 +5,9 @@ import GetRecordsFunct from '../../functions/GetRecordsFunct';
 
 export default function RecordsUpdatePage() {
     const [currentRecords, setCurrentRecords] = useState(null);
-    const [recordGenderType, setRecordGenderType] = useState('Male');
+    const [recordGenderType, setRecordGenderType] = useState('');
+    const [weightClass, setWeightClass] = useState('');
+    const [equipment, setEquipment] = useState('');
 
     async function handleGetRecords (url, raw) {
         const RecordItems = await GetRecordsFunct(url, raw);
@@ -15,16 +17,19 @@ export default function RecordsUpdatePage() {
 
     useEffect(() => {
         const url = "https://2jdd2l8dra.execute-api.eu-west-2.amazonaws.com/prod"
-        const raw = JSON.stringify({"Lift":"Squat","Gender":recordGenderType,"WeightClass":"53kg","Equipment":"Sleeves"});
+        const raw = JSON.stringify({"Lift":"Bench","Gender":recordGenderType,"WeightClass":weightClass,"Equipment":equipment});
         console.log(raw);
-        handleGetRecords(url, raw);
-    },[recordGenderType]);
+        if (weightClass !== "" && equipment !== "") {
+            handleGetRecords(url, raw);
+        } else {
+            setCurrentRecords(null);
+        }
+
+    },[recordGenderType, weightClass, equipment]);
 
     return (
         <div className="Records-Page">
-            <p>Records</p>
-            <p>{recordGenderType}</p>
-            <RecordsTypeSwitch typesetter = {setRecordGenderType}/>
+            <RecordsTypeSwitch genderType = {recordGenderType} typeSetter = {setRecordGenderType} weightClass = {weightClass} classSetter = {setWeightClass} equipment = {equipment} setEquipment = {setEquipment}/>
             <AllRecordsTable CurrentRecords = {currentRecords}/>
         </div>
     );
