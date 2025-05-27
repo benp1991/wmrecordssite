@@ -14,16 +14,15 @@ function App() {
   return (
     <div className="App"> 
       <Header />
-      <p>{window.location.pathname}</p>
       {(() => {
         switch (window.location.pathname) {
-          case '/Home': return <HomePage /> /* falls through */
-          case '/Events': return <Events /> /* falls through */
-          case '/Results': return <Results /> /* falls through */
-          case '/Records': return <Records /> /* falls through */
-          case '/Records%20Update': return <RecordsUpdatePage /> /* falls through */
-          case '/Contact': return <Contact /> /* falls through */
-          case '/Useful%20Information': return <UsefulInformation /> /* falls through */
+          case '/Home/': return <HomePage /> /* falls through */
+          case '/Events/': return <Events /> /* falls through */
+          case '/Results/': return <Results /> /* falls through */
+          case '/Records/': return <Records /> /* falls through */
+          case '/Records%20Update/': return <RecordsUpdatePage /> /* falls through */
+          case '/Contact/': return <Contact /> /* falls through */
+          case '/Useful%20Information/': return <UsefulInformation /> /* falls through */
           default: return <HomePage />
       }
       })()}
