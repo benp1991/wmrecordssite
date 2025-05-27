@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import RecordsTypeSwitch from './RecordTypeSwitch';
 import AllRecordsTable from './AllRecordsTable';
+import GetRecordsFunct from '../../functions/GetRecordsFunct';
 
 export default function RecordsUpdatePage() {
-    const [currentRecords, setCurrentRecords] = useState([]);
+    const [currentRecords, setCurrentRecords] = useState(null);
     const [recordGenderType, setRecordGenderType] = useState('Male');
 
+    async function handleGetRecords (url, raw) {
+        const RecordItems = await GetRecordsFunct(url, raw);
+        setCurrentRecords(RecordItems);
+        return RecordItems
+    }
+
     useEffect(() => {
-        alert('Requested data from server...');
-        get(forecastType).then((response) => {
-          alert('Response: ' + JSON.stringify(response,'',2));
-          setData(response.data);
-        });
-      },[forecastType]);
+        const url = "https://2jdd2l8dra.execute-api.eu-west-2.amazonaws.com/prod"
+        const raw = JSON.stringify({"Lift":"Squat","Gender":recordGenderType,"WeightClass":"53kg","Equipment":"Sleeves"});
+        console.log(raw);
+        handleGetRecords(url, raw);
+    },[recordGenderType]);
 
     return (
         <div className="Records-Page">

@@ -42,7 +42,7 @@ function RecordUpdater() {
         <div className="record_selector">
             <div className="record_detail">
                 <label htmlFor="Name">Name :</label>
-                <input type="text" id="Name" autocomplete="name" value={lifterName} onChange={e => setLifterName(e.target.value)}/>
+                <input type="text" id="Name" value={lifterName} onChange={e => setLifterName(e.target.value)}/>
                 <label htmlFor="Lift">Lift :</label>
                 <select name="Lift" id="Lift" value={lift} onChange={e => setLift(e.target.value)}>
                     <option value="">Select</option>

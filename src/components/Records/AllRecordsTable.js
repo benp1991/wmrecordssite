@@ -15,26 +15,44 @@ function AllRecordsTable({CurrentRecords}) {
         }
          
     );
-    const tablebodyJSX = CurrentRecords.map(rowitem =>
-        {
-            return(
-                <tr key={rowitem.Primary_Sort_Key}>
-                    <td>{rowitem.Class}</td>
-                    <td>{rowitem.Age_Class}</td>
-                    <td>{rowitem.Lift}</td>
-                    <td>{rowitem.Date}</td>
-                    <td>{rowitem.Full_Name}</td>
-                    <td>{rowitem.Location}</td>
-                    <td>{rowitem.Equipment}</td>
-                    <td>{rowitem.Record_Type}</td>
-                    <td>{rowitem.Weight}</td>
-                    <td>View History</td>
-                </tr>
-            )
-        }
-
-    );
-
+    let tablebodyJSX;
+    console.log(CurrentRecords);
+    if (CurrentRecords){
+        tablebodyJSX = CurrentRecords.map(rowitem =>
+            {
+                return(
+                    <tr key={rowitem.Primary_Sort_Key}>
+                        <td>{rowitem.Class}</td>
+                        <td>{rowitem.Age_Class}</td>
+                        <td>{rowitem.Lift}</td>
+                        <td>{rowitem.Date}</td>
+                        <td>{rowitem.Full_Name}</td>
+                        <td>{rowitem.Location}</td>
+                        <td>{rowitem.Equipment}</td>
+                        <td>{rowitem.Record_Type}</td>
+                        <td>{rowitem.Weight}</td>
+                        <td>View History</td>
+                    </tr>
+                )
+            }
+        );
+    } else {
+        tablebodyJSX = (
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>View History</td>
+            </tr>
+        )
+    }
+    
     return (
         <div className="record_table">
             <table id="CurrentRecords">
