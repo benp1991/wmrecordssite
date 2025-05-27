@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App"> 
       <Header />
+      <p>{window.location.pathname}</p>
       {(() => {
         switch (window.location.pathname) {
           case '/Home': return <HomePage /> /* falls through */
