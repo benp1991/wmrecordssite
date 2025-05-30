@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { maleWeightClasses, femaleWeightClasses} from '../../dataitems/dataitems';
+import { maleWeightClasses, femaleWeightClasses} from '../../static/dataitems/dataitems';
 
 export default function RecordsTypeSwitch({genderType, typeSetter, weightClass, classSetter, equipment, setEquipment}) {
     const [weightClassOptions, setWeightClassOptions] = useState(null);

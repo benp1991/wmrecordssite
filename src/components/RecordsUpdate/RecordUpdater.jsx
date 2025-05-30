@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UpdateRecordButton from './UpdateRecordButton';
-import { maleWeightClasses, femaleWeightClasses} from '../../dataitems/dataitems';
+import { maleWeightClasses, femaleWeightClasses} from '../../static/dataitems/dataitems';
 
 function RecordUpdater() {
     const [lift, setLift] = useState("");

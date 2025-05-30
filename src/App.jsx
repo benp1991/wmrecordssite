@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
 import './App.css';
 import RecordsUpdatePage from "./components/RecordsUpdate/RecordsUpdatePage";
 import HomePage from './components/HomePage/HomePage';
@@ -8,27 +9,28 @@ import Events from './components/Events/Events';
 import Results from './components/Results/Results';
 import Records from './components/Records/Records';
 import Contact from './components/Contact/Contact';
+import WMpowerliftingLogo from './static/images/WMpowerliftingLogo.png';
 
 
-function App() {  
-  return (
-    <div className="App"> 
-      <Header />
-      {(() => {
-        switch (window.location.pathname) {
-          case '/Home/': return <HomePage /> /* falls through */
-          case '/Events/': return <Events /> /* falls through */
-          case '/Results/': return <Results /> /* falls through */
-          case '/Records/': return <Records /> /* falls through */
-          case '/Records%20Update/': return <RecordsUpdatePage /> /* falls through */
-          case '/Contact/': return <Contact /> /* falls through */
-          case '/Useful%20Information/': return <UsefulInformation /> /* falls through */
-          default: return <HomePage />
-      }
-      })()}
-    </div>
-
+export default function App() {  
+  return (    
+    <Router>
+      <div className="App">
+        <Header />        
+        <Routes>
+          <Route path="/Home" element={<HomePage />} />
+          <Route path="/Events" element={<Events />} />
+          <Route path="/Results" element={<Results />} />
+          <Route path="/Records" element={<Records />} />
+          <Route path="/RecordsUpdate" element={<RecordsUpdatePage />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/UsefulInformation" element={<UsefulInformation />} />
+          {/* Default route to HomePage */}
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
+    
   );
 }
 
-export default App;

@@ -1,16 +1,18 @@
 import React from 'react';
+import { Link }  from 'react-router-dom';
 
 function NavBar(props) {
-    const pages = ['Home', 'Events', 'Results', 'Records', 'Records Update', 'Contact', 'Useful Information'];
-    
-    const navLinks = pages.map(page => {
-      return (
-          <a className="Header-Links" href={'/' + page} key={page}>
-            {page}
-          </a>
-      )
-    });
-    return <nav>{navLinks}</nav>;
+    return (
+      <nav>
+        <Link className="Header-Links" to="/Home" key="Home">Home</Link>
+        <Link className="Header-Links" to="/Events" key="Events">Events</Link>    
+        <Link className="Header-Links" to="/Results" key="Results">Results</Link>        
+        <Link className="Header-Links" to="/Records" key="Records">Records</Link>           
+        <Link className="Header-Links" to="/RecordsUpdate" key="RecordsUpdate">Records Update</Link>          
+        <Link className="Header-Links" to="/Contact" key="Contact">Contact</Link>          
+        <Link className="Header-Links" to="/UsefulInformation" key="UsefulInformation">Useful Information</Link>     
+      </nav>
+    );
 }
 
 export default NavBar;

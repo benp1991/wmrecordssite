@@ -1,7 +1,7 @@
 import React from 'react';
 
 function RecordsTable(props) {
-    const tableHeaders = ['Class', 'Age', 'Lift','Date', 'Name', 'Location','Equipment', 'Record Type', 'Weight (kg)', 'History'];
+    const tableHeaders = ['Equipment','Class', 'Age', 'Lift','Weight (kg)','Name','Date', 'Location', 'History'];
     const tableHeadersJSX = tableHeaders.map(header =>
         {
             if(header === "Name"){
@@ -17,17 +17,30 @@ function RecordsTable(props) {
     );
     const tablebodyJSX = props.CurrentRecords.map(rowitem =>
         {
+            let Lift = "";
+            let Equipment = "";
+            const lifts = {S: 'Squat', B: 'Bench', D: 'Deadlift', Total: 'Total'};
+            if (rowitem.Record_Type !== 'Full Power' ){
+                Lift = lifts[rowitem.Lift]+' A/C';
+            } else {
+                Lift = lifts[rowitem.Lift];
+            }
+            if (rowitem.Equipment !== 'Sleeves' ){
+                Equipment = 'Equipped';
+            } else {
+                Equipment = 'Classic';
+            }
+
             return(
                 <tr key={rowitem.Primary_Sort_Key}>
+                    <td>{Equipment}</td>
                     <td>{rowitem.Class}</td>
                     <td>{rowitem.Age_Class}</td>
-                    <td>{rowitem.Lift}</td>
-                    <td>{rowitem.Date}</td>
-                    <td>{rowitem.Full_Name}</td>
-                    <td>{rowitem.Location}</td>
-                    <td>{rowitem.Equipment}</td>
-                    <td>{rowitem.Record_Type}</td>
+                    <td>{Lift}</td>
                     <td>{rowitem.Weight}</td>
+                    <td>{rowitem.Full_Name}</td>
+                    <td>{rowitem.Date}</td>
+                    <td>{rowitem.Location}</td>
                     <td>View History</td>
                 </tr>
             )

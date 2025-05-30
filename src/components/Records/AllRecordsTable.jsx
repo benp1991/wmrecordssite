@@ -61,7 +61,6 @@ function AllRecordsTable({CurrentRecords}) {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
             </tr>
         )
     }
