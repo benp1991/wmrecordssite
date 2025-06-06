@@ -8,10 +8,16 @@ export default function RecordsUpdatePage() {
     const [currentRecords, setCurrentRecords] = useState([]);
 
     return (
-        <div className="Records-Page">
-            <RecordSelector RecordSetter ={setCurrentRecords} />
-            <RecordsTable CurrentRecords = {currentRecords} />
-            <RecordUpdater />
+        <div>
+            <div className='Page-Header-Container'>
+                    <h1 className='Page-Header'>Update Records</h1>
+            </div>
+            <div className="Records-Page">
+                
+                <RecordSelector RecordSetter ={setCurrentRecords} />
+                <RecordsTable CurrentRecords = {currentRecords} />
+                <RecordUpdater />  
+            </div>
             <UploadCSV />
         </div>
     );

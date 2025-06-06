@@ -5,7 +5,10 @@ import WMpowerliftingLogo from '../../static/images/WMpowerliftingLogo.png';
 function Header() {
     return (
         <header className="App-header">
-            <img src={WMpowerliftingLogo} className="header-logo" alt="West Midlands Powerlifting Logo"></img>
+            <div className="header-logo">
+                <img src={WMpowerliftingLogo} className="header-logo-image" alt="West Midlands Powerlifting Logo"></img>
+            </div>
+            
             <NavBar />
         </header>
     );

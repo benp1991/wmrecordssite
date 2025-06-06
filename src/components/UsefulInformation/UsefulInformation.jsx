@@ -3,8 +3,8 @@ import React from 'react';
 export default function UsefulInformation(){
 
     return(
-        <div>
-            <p>Useful Information</p>
+        <div className='Page-Header-Container'>
+            <h1 className='Page-Header'>USEFUL INFORMATION</h1>
         </div>
     )
 }

@@ -17,7 +17,7 @@ export default function RecordsUpdatePage() {
 
     useEffect(() => {
         const url = "https://2jdd2l8dra.execute-api.eu-west-2.amazonaws.com/prod"
-        const raw = JSON.stringify({"Lift":"Bench","Gender":recordGenderType,"WeightClass":weightClass,"Equipment":equipment});
+        const raw = JSON.stringify({"Lift": "","Gender":recordGenderType,"WeightClass":weightClass,"Equipment":equipment});
         console.log(raw);
         if (weightClass !== "" && equipment !== "") {
             handleGetRecords(url, raw);
@@ -28,9 +28,14 @@ export default function RecordsUpdatePage() {
     },[recordGenderType, weightClass, equipment]);
 
     return (
-        <div className="Records-Page">
-            <RecordsTypeSwitch genderType = {recordGenderType} typeSetter = {setRecordGenderType} weightClass = {weightClass} classSetter = {setWeightClass} equipment = {equipment} setEquipment = {setEquipment}/>
-            <AllRecordsTable CurrentRecords = {currentRecords}/>
+        <div>
+            <div className='Page-Header-Container'>
+                <h1 className='Page-Header'>Records</h1>
+            </div>
+            <div className="Records-Page">
+                <RecordsTypeSwitch genderType = {recordGenderType} typeSetter = {setRecordGenderType} weightClass = {weightClass} classSetter = {setWeightClass} equipment = {equipment} setEquipment = {setEquipment}/>
+                <AllRecordsTable CurrentRecords = {currentRecords}/>
+            </div>
         </div>
     );
 }
