@@ -9,7 +9,7 @@ import Events from './components/Events/Events';
 import Results from './components/Results/Results';
 import Records from './components/Records/Records';
 import Contact from './components/Contact/Contact';
-import WMpowerliftingLogo from './static/images/WMpowerliftingLogo.png';
+import Footer from './components/Footer/Footer';
 
 
 export default function App() {  

@@ -15,7 +15,6 @@
   width: 100%;
   top: 0;
   background-color: #ffffff;
-  min-height: 10vh;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: #272727;
@@ -75,6 +74,7 @@
 
 .HomePage {
   text-align: center;
+  min-height:calc(100vh - 272px);
 }
 
 .Records-Page {
@@ -84,11 +84,62 @@
   margin-right: auto;
 }
 
-/*After hear needs revision   */
-
-.App-link {
-  color: #61dafb;
+.Records-Page-Description {
+  border-bottom: 1px solid #333333;
 }
+
+.Records-Claim {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 33px;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.section_footer{
+  position: relative;
+  padding: 35px 0px 35px 0px;
+  bottom: 0px;
+  width : 100%;
+  min-height: 60px;
+  background-color: #33332E;
+  color: white;
+  text-align: center;
+}
+
+.footer_box {
+  font-family: "Montserrat", Sans-serif;
+  align-content: center;
+  align-items: center;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFFFFF40;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.Results-Page {
+  min-height:calc(100vh - 256px);
+}
+
+.Events-Page {
+  min-height:calc(100vh - 256px);
+}
+
+.Contact-Page {
+  min-height:calc(100vh - 256px);
+}
+
+.UsefulInfo-Page {
+  min-height:calc(100vh - 256px);
+}
+
+/*After hear needs revision   */
 
 table {
   margin: auto;
@@ -151,26 +202,3 @@ button {
   margin-bottom: 20px;
 }
 
-.section_footer{
-  position: fixed;
-  bottom: 0px;
-  width : 100%;
-  height: 60px;
-  background-color: #282c34;
-  color: white;
-  text-align: left;
-}
-/*
-
-.section_header{
-    font-size: 30px;
-    }
-
-
-
-.record_history{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    }
-
-*/

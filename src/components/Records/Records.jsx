@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import RecordsTypeSwitch from './RecordTypeSwitch';
 import AllRecordsTable from './AllRecordsTable';
 import GetRecordsFunct from '../../functions/GetRecordsFunct';
+import RecordsPageDescriptionText from './RecordsPageDescriptionText';
+import RecordsClaim from './RecordClaim';
+import Footer from '../Footer/Footer';
 
 export default function RecordsUpdatePage() {
     const [currentRecords, setCurrentRecords] = useState(null);
@@ -33,9 +36,12 @@ export default function RecordsUpdatePage() {
                 <h1 className='Page-Header'>Records</h1>
             </div>
             <div className="Records-Page">
+                <RecordsPageDescriptionText />
                 <RecordsTypeSwitch genderType = {recordGenderType} typeSetter = {setRecordGenderType} weightClass = {weightClass} classSetter = {setWeightClass} equipment = {equipment} setEquipment = {setEquipment}/>
                 <AllRecordsTable CurrentRecords = {currentRecords}/>
+                <RecordsClaim />
             </div>
+            <Footer />
         </div>
     );
 }
