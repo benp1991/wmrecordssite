@@ -9,7 +9,7 @@ import Events from './components/Events/Events';
 import Results from './components/Results/Results';
 import Records from './components/Records/Records';
 import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import Login from './components/Login/Login';
 
 
 export default function App() {  
@@ -27,6 +27,7 @@ export default function App() {
           <Route path="/UsefulInformation" element={<UsefulInformation />} />
           {/* Default route to HomePage */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </div>
     </Router>

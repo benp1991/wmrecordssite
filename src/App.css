@@ -20,7 +20,7 @@
   color: #272727;
   display: flex;
   justify-content: center;
-  max-width: 1240px;
+  max-width: 1540px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -28,6 +28,8 @@
 
 .header-logo{
   width: 10%;
+  position: absolute;
+  left: 0;
 }
 
 .header-logo-image {
@@ -58,7 +60,7 @@
   color: #333333;
   font-weight: 400;
   line-height: 36px;
-  max-width: 1240px;
+  max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -74,18 +76,20 @@
 
 .HomePage {
   text-align: center;
-  min-height:calc(100vh - 272px);
+  min-height:calc(100vh - 232px);
 }
 
 .Records-Page {
   text-align: center;
-  max-width: 1240px;
+  max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
+  min-height: calc(100vh - 324px);
 }
 
 .Records-Page-Description {
   border-bottom: 1px solid #333333;
+  margin-bottom: 40px;
 }
 
 .Records-Claim {
@@ -98,10 +102,10 @@
 
 .section_footer{
   position: relative;
-  padding: 35px 0px 35px 0px;
+  padding: 15px 0px 15px 0px;
   bottom: 0px;
   width : 100%;
-  min-height: 60px;
+  min-height: 20px;
   background-color: #33332E;
   color: white;
   text-align: center;
@@ -111,7 +115,7 @@
   font-family: "Montserrat", Sans-serif;
   align-content: center;
   align-items: center;
-  max-width: 1240px;
+  max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -124,50 +128,56 @@
 }
 
 .Results-Page {
-  min-height:calc(100vh - 256px);
+  min-height:calc(100vh - 216px);
 }
 
 .Events-Page {
-  min-height:calc(100vh - 256px);
+  min-height:calc(100vh - 216px);
 }
 
 .Contact-Page {
-  min-height:calc(100vh - 256px);
+  min-height:calc(100vh - 216px);
 }
 
 .UsefulInfo-Page {
-  min-height:calc(100vh - 256px);
+  min-height:calc(100vh - 216px);
 }
 
-/*After hear needs revision   */
+.Login-Page {
+  min-height: calc(100vh - 216px);
+}
+
+.Autenticator-Page {
+  text-align: center;
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
 table {
   margin: auto;
 }
+
 table, th, tr, td {
   border: 1px solid black;
   color: solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
   height: 30px
 }
+
 th {
-  background-color: #B8CCE4;
+  background-color: #012d59;
+  color: white;
   font-size: 20px;
 }
 td {
   text-align: center;
 }
 
-.record_selector{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .record_table{
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
-  min-height:200px;
+  min-height:60px;
 }
 
 .default_cell{
@@ -182,23 +192,25 @@ td {
 
 input, select {
   color: solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
   margin-left: 20px;
+  font-size: 20px;
 }
 
 label, button {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
   margin-left: 40px;
+  font-size: 20px;
 }
 button {
-  background-color: #B8CCE4;
-  font-size: 20px;
+  background-color: #012d59;
+  color: white;
+}
+
+.record_selector{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .record_detail{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
