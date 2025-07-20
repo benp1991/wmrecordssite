@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
 import './App.css';
 import RecordsUpdatePage from "./components/RecordsUpdate/RecordsUpdatePage";
@@ -10,27 +9,30 @@ import Results from './components/Results/Results';
 import Records from './components/Records/Records';
 import Contact from './components/Contact/Contact';
 import Login from './components/Login/Login';
+import { Authenticator } from '@aws-amplify/ui-react';
 
+export default function App() { 
 
-export default function App() {  
   return (    
-    <Router>
-      <div className="App">
-        <Header />        
-        <Routes>
-          <Route path="/Home" element={<HomePage />} />
-          <Route path="/Events" element={<Events />} />
-          <Route path="/Results" element={<Results />} />
-          <Route path="/Records" element={<Records />} />
-          <Route path="/RecordsUpdate" element={<RecordsUpdatePage />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/UsefulInformation" element={<UsefulInformation />} />
-          {/* Default route to HomePage */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Login" element={<Login />} />
-        </Routes>
-      </div>
-    </Router>
+    <Authenticator.Provider>
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/Home" element={<HomePage />} />
+            <Route path="/Events" element={<Events />} />
+            <Route path="/Results" element={<Results />} />
+            <Route path="/Records" element={<Records />} />
+            <Route path="/RecordsUpdate" element={<RecordsUpdatePage />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/UsefulInformation" element={<UsefulInformation />} />
+            {/* Default route to HomePage */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Login" element={<Login />} />
+          </Routes>
+        </div>
+      </Router>
+    </Authenticator.Provider>
     
   );
 }
