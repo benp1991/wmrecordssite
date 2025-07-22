@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import './Records.css';
+import { useState, useEffect } from 'react';
 import RecordsTypeSwitch from './RecordTypeSwitch';
 import AllRecordsTable from './AllRecordsTable';
 import GetRecordsFunct from '../../functions/GetRecordsFunct';

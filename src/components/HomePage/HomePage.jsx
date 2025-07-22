@@ -1,4 +1,4 @@
-import {useState , useEffect } from 'react';
+import './HomePage.css';
 import Footer from '../Footer/Footer';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { useGetAuthData } from '../../hooks/useGetAuthData';

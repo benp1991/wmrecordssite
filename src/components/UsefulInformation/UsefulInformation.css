@@ -1,0 +1,42 @@
+.UsefulInfo-Page {
+  min-height:calc(100vh - 328px);
+  margin-top: 20px;
+}
+
+.resource_cell {
+  width: 80%;
+}
+
+.link_cell {
+  width: 20%;
+}
+
+.UsefulInfo-Table {
+  max-width: 1040px;
+  width: 60%;
+  text-align: center;
+  
+}
+
+.Link-Button{
+    padding: 10px 25px;
+    background-color: #DC0515;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.UsefulInfo-Table th, .UsefulInfo-Table td {
+  padding: 15px;
+  font-weight: 600;
+}
+
+.UsefulInfo-Table th {
+  font-size: 1em;
+}
+
+.title-cell {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}

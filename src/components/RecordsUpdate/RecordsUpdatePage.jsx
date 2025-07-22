@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import './RecordUpdate.css';
+import { useState } from 'react';
 import RecordSelector from "./RecordSelector";
 import RecordsTable from './RecordsTable';
 import RecordUpdater from './RecordUpdater';

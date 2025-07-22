@@ -1,0 +1,11 @@
+.Login-Page {
+  min-height: calc(100vh - 216px);
+}
+
+.Autenticator-Page {
+  text-align: center;
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}

@@ -10,56 +10,6 @@
   flex-direction: column;
 }
 
-.App-header {
-  position: sticky;
-  width: 100%;
-  top: 0;
-  background-color: #ffffff;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: #272727;
-  display: flex;
-  justify-content: center;
-  max-width: 1540px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-logo{
-  width: 10%;
-  position: absolute;
-  left: 0;
-}
-
-.logout-button {
-  position: absolute;
-  right: 0;
-  font-size: 20px;
-}
-
-.header-logo-image {
-  height: 100px;
-  max-width: 100%;
-  object-fit: contain;
-  margin: auto;
-}
-
-.Header-Links {
-  color: #012D5A;
-  margin-right: 10px;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-transform: uppercase;
-  padding: 40px 11px 40px 11px;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 1.45px;
-  text-decoration: none;
-}
-
 .Page-Header {
   font-family: "Montserrat", Sans-serif;
   font-size: 33px;
@@ -79,105 +29,28 @@
   background-color: #E8E8E8;
   padding: 16px 0px 20px 0px;
 }
-
-.HomePage {
-  text-align: center;
-  min-height:calc(100vh - 232px);
-}
-
-.Records-Page {
-  text-align: center;
-  max-width: 1540px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: calc(100vh - 324px);
-}
-
-.Records-Page-Description {
-  border-bottom: 1px solid #333333;
-  margin-bottom: 40px;
-}
-
-.Records-Claim {
-  font-family: "Montserrat", Sans-serif;
-  font-size: 33px;
-  color: #333333;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-
-.section_footer{
-  position: relative;
-  padding: 15px 0px 15px 0px;
-  bottom: 0px;
-  width : 100%;
-  min-height: 20px;
-  background-color: #33332E;
-  color: white;
-  text-align: center;
-}
-
-.footer_box {
-  font-family: "Montserrat", Sans-serif;
-  align-content: center;
-  align-items: center;
-  max-width: 1540px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #FFFFFF40;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 14px;
-}
-
-.Results-Page {
-  min-height:calc(100vh - 216px);
-}
-
-.Events-Page {
-  min-height:calc(100vh - 216px);
-}
-
-.Contact-Page {
-  min-height:calc(100vh - 216px);
-}
-
-.UsefulInfo-Page {
-  min-height:calc(100vh - 216px);
-}
-
-.Login-Page {
-  min-height: calc(100vh - 216px);
-}
-
-.Autenticator-Page {
-  text-align: center;
-  max-width: 1540px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
-
 table {
   margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
 
-table, th, tr, td {
-  border: 1px solid black;
+th, tr, td {
+  
   color: solid black;
-  height: 30px
+  height: 30px;
+  
 }
 
 th {
   background-color: #012d59;
+  border: 1px solid white;
   color: white;
   font-size: 20px;
 }
 td {
   text-align: center;
+  border: 1px solid black;
 }
 
 .record_table{
@@ -188,12 +61,6 @@ td {
 
 .default_cell{
   width: 90px;
-}
-.name_cell{
-  width: 300px;
-}
-.location_cell{
-  width: 400px;
 }
 
 input, select {
@@ -209,14 +76,4 @@ label, button {
 button {
   background-color: #012d59;
   color: white;
-}
-
-.record_selector{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.record_detail{
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

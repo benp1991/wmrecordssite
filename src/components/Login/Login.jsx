@@ -1,3 +1,4 @@
+import './Login.css';
 import { Authenticator } from '@aws-amplify/ui-react';
 import outputs from '../../../amplify_outputs.json';
 import Footer from '../Footer/Footer';

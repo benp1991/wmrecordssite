@@ -1,6 +1,8 @@
 import NavBar from './NavBar';
 import WMpowerliftingLogo from '../../static/images/WMpowerliftingLogo.png';
 import Logout from './Logout';
+import './Header.css';
+
 
 
 function Header() {

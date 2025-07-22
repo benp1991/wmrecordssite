@@ -1,0 +1,20 @@
+.record_selector{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.record_detail{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.csv_section_footer{
+  position: relative;
+  padding: 15px 0px 15px 0px;
+  bottom: 0px;
+  width : 100%;
+  min-height: 20px;
+  background-color: #33332E;
+  color: white;
+  text-align: center;
+}

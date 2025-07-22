@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { maleWeightClasses, femaleWeightClasses} from '../../static/dataitems/dataitems';
+import { maleWeightClasses, femaleWeightClasses} from '../../static/dataitems/weightclasses';
 import GetRecordsButton from './GetRecordsButton';
 
 

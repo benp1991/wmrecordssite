@@ -1,4 +1,4 @@
-import React from 'react';
+import './Results.css';
 import Footer from '../Footer/Footer';
 
 export default function Results(){
