@@ -1,3 +1,65 @@
 .Events-Page {
   min-height:calc(100vh - 216px);
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Event-Time-Line {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 16px;
+}
+
+.Event-Time-Line-Item {
+  list-style: none;
+  display: flex;
+  position: relative;
+  min-height: 70px;
+}
+
+.Event-Time-Line-Item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.Event-Time-Line-Item-Primary {
+  margin:0;
+  line-height: 1.5;
+  padding: 6px 16px;
+  text-align: left;
+  flex:1;
+}
+
+.Event-Time-Line-Item:nth-of-type(even) .Event-Time-Line-Item-Primary{
+  text-align: right;
+}
+
+.Event-Time-Line-Item-Secondary {
+  margin: 0;
+  line-height: 1.5;
+  padding: 6px 16px;
+  margin-right: auto;
+  text-align: right;
+  flex: 1;
+}
+
+.Event-Time-Line-Item:nth-of-type(even) .Event-Time-Line-Item-Secondary{
+  text-align: left;
+}
+
+.Event-Time-Line-Item-Separator {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  align-items: center;
+}
+
+.Event-Time-Line-Item-Connector {
+  width: 2px;
+  background-color: #bdbdbd;
+  flex-grow: 1;
+}
+
+.Event-Time-Line-Item-Logo {
+  max-width: 100px;
 }

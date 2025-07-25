@@ -3,9 +3,13 @@ export const eventitems =  [
         competition:"Autumn Cup", 
         date:"21-09-2025",
         durationDays: "1",
-        location: "Barbell Training Complex, Millers Road, Warwick, Warwickshire CV34 5AE United Kingdom",
+        location: "Barbell Training Complex\nMillers Road\nWarwick\nWarwickshire\nCV34 5AE\nUnited Kingdom",
         entrycost: "£50",
-        description: "50 entries available. \nEntries open 27th July. \nEntries close 24th Aug. \nInitially open to West Midlands members only. Guest lifters entry from 3rd Aug providing sufficient spots remaining.\nTo ensure a place in this and any West Midlands Competitions, please sign up and contribute through our Volunteer Program via our Linktree.\nAnyone who has volunteered at one of our competitions is entitled to early entry to a competition of their choice (please note this is for the volunteer only, not by proxy).\nAnyone wishing to claim priority entry must do so one week before entries open via the google form in our linktree.\nAfter purchasing a ticket for one of our competitions please remember to fill out the google form linked in our linktree and the ticket as this is mandatory for all lifters.",
+        entriesopen: "27-07-2025",
+        entriesclose: "24-08-2025",
+        guestentry: "03-08-2025",
+        entriesavailable: "50",
+        logo:"Autumn_primary@4x.png",
         website:"https://west-midlands-powerlifting.square.site/"
     },
     {
@@ -14,7 +18,24 @@ export const eventitems =  [
         durationDays: "2",
         location: "TBC",
         entrycost: "£50",
-        description: "100 entries available. \nEntries open 25th Oct. \nEntries close 15th Nov. \nInitially open to West Midlands members only. Guest lifters entry from 25th Oct providing sufficient spots remaining.\nTo ensure a place in this and any West Midlands Competitions, please sign up and contribute through our Volunteer Program via our Linktree.\nAnyone who has volunteered at one of our competitions is entitled to early entry to a competition of their choice (please note this is for the volunteer only, not by proxy).\nAnyone wishing to claim priority entry must do so one week before entries open via the google form in our linktree.\nAfter purchasing a ticket for one of our competitions please remember to fill out the google form linked in our linktree and the ticket as this is mandatory for all lifters.",
+        entriesopen: "18-10-2025",
+        entriesclose: "15-11-2025",
+        guestentry: "25-10-2025",
+        entriesavailable: "100",
+        logo:"Winter_primary@4x.png",
+        website:"https://west-midlands-powerlifting.square.site/"
+    },
+    {
+        competition:"Development Comp", 
+        date:"1-2-2026",
+        durationDays: "1",
+        location: "TBC",
+        entrycost: "£50",
+        entriesopen: "7-12-2025",
+        entriesclose: "4-1-2026",
+        guestentry: "14-12-2025",
+        entriesavailable: "50",
+        logo:"Dev_primary@4x.png",
         website:"https://west-midlands-powerlifting.square.site/"
     }
 ];

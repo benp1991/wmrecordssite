@@ -1,8 +1,12 @@
-.App-header {
+.Header-Container {
   position: sticky;
-  width: 100%;
   top: 0;
+  z-index: 1000;
   background-color: #ffffff;
+}
+
+.App-header {
+  width: 100%;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: #272727;
@@ -12,16 +16,18 @@
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+  align-self: flex-start;
 }
 
 .header-logo{
   width: 10%;
-  position: absolute;
+  min-width: 50px;
+  position: relative;
   left: 0;
 }
 
 .logout-button {
-  position: absolute;
+  position: relative;
   right: 0;
   font-size: 20px;
 }
@@ -39,7 +45,7 @@
   flex-direction: column;
   justify-content: flex-start;
   text-transform: uppercase;
-  padding: 40px 11px 40px 11px;
+  padding: 0px 11px 0px 11px;
   font-family: "Montserrat", Sans-serif;
   font-size: 18px;
   font-weight: 600;
