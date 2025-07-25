@@ -31,7 +31,7 @@ export default function EventTimeLine(){
 
             const [image, setImage] = useState("");
        
-            import(`../../static/images/eventLogos/${rowitem.logo}`).then(
+            import(`../../../public/eventLogos/${rowitem.logo}`).then(
                 (image)=> setImage(image.default)
             );
 
