@@ -1,4 +1,5 @@
 import { eventitems } from '../../static/dataitems/events';
+import { useState } from 'react';
 
 export default function EventTimeLine(){
     const numberOfEvents = eventitems.length;
@@ -27,15 +28,19 @@ export default function EventTimeLine(){
                 <p style={{whiteSpace: "pre-wrap"}}>{rowitem.location}</p>
                 <p>{rowitem.entrycost}</p>
             </div>;
+
+            const [image, setImage] = useState("");
        
-            const imagesrc = new URL('../../static/images/eventLogos/'+rowitem.logo, import.meta.url).href;
+            import(`../../static/images/eventLogos/${rowitem.logo}`).then(
+                (image)=> setImage(image.default)
+            );
 
             if (numberOfEvents === i+1){
                 return(
                     <li className="Event-Time-Line-Item">
                         <div className='Event-Time-Line-Item-Secondary'>{timelineOpConentJSX}</div>
                         <div className='Event-Time-Line-Item-Separator'>
-                            <img className="Event-Time-Line-Item-Logo" src={imagesrc} />
+                            <img className="Event-Time-Line-Item-Logo" src={image} />
                         </div>
                         <div className='Event-Time-Line-Item-Primary'>{timelineConentJSX}</div>
                     </li>
@@ -45,7 +50,7 @@ export default function EventTimeLine(){
                     <li className="Event-Time-Line-Item">
                         <div className='Event-Time-Line-Item-Secondary'>{timelineOpConentJSX}</div>
                         <div className='Event-Time-Line-Item-Separator'>
-                            <img className="Event-Time-Line-Item-Logo"src={imagesrc} />
+                            <img className="Event-Time-Line-Item-Logo"src={image} />
                             <span className="Event-Time-Line-Item-Connector"></span>
                         </div>
                         <div className='Event-Time-Line-Item-Primary'>{timelineConentJSX}</div>
