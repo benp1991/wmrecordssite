@@ -9,7 +9,7 @@ export const eventitems =  [
         entriesclose: "24-08-2025",
         guestentry: "03-08-2025",
         entriesavailable: "50",
-        logo:"Autumn_primary@4x.png",
+        logo:"Autumn_primary@4x",
         website:"https://west-midlands-powerlifting.square.site/"
     },
     {
@@ -22,7 +22,7 @@ export const eventitems =  [
         entriesclose: "15-11-2025",
         guestentry: "25-10-2025",
         entriesavailable: "100",
-        logo:"Winter_primary@4x.png",
+        logo:"Winter_primary@4x",
         website:"https://west-midlands-powerlifting.square.site/"
     },
     {
@@ -35,7 +35,7 @@ export const eventitems =  [
         entriesclose: "4-1-2026",
         guestentry: "14-12-2025",
         entriesavailable: "50",
-        logo:"Dev_primary@4x.png",
+        logo:"Dev_primary@4x",
         website:"https://west-midlands-powerlifting.square.site/"
     }
 ];
