@@ -16,7 +16,6 @@ function AllRecordsTable({CurrentRecords}) {
          
     );
     let tablebodyJSX;
-    console.log(CurrentRecords);
     if (CurrentRecords){
         tablebodyJSX = CurrentRecords.map(rowitem =>
             {

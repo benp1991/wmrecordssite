@@ -11,11 +11,10 @@ function NavBar() {
 
   let showAdminLinks = false;
   if (getAuthData.groups) {
-    console.log("Has groups");
-        if ((getAuthData.groups.indexOf("ADMINS") > -1) || (getAuthData.groups.indexOf("EDITORS") > -1)) {
-          showAdminLinks = true;
-        }
-  }
+    if ((getAuthData.groups.indexOf("ADMINS") > -1) || (getAuthData.groups.indexOf("EDITORS") > -1)) {
+      showAdminLinks = true;
+    }
+}
   else {
       showAdminLinks = false;
   }
@@ -47,8 +46,7 @@ function NavBar() {
   );
 
   return (
-    <div>
-      
+    <div className="NavBar">
       <nav>
         {navList}
       </nav>

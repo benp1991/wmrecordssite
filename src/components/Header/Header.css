@@ -10,8 +10,8 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: #272727;
-  display: flex;
   justify-content: center;
+  display: flex;
   max-width: 1540px;
   height: 100px;
   margin-left: auto;
@@ -27,6 +27,7 @@
 }
 
 .logout-button {
+  width: 10%;
   position: relative;
   right: 0;
   font-size: 20px;
@@ -43,7 +44,7 @@
   color: #012D5A;
   margin-right: 10px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   text-transform: uppercase;
   padding: 0px 11px 0px 11px;
   font-family: "Montserrat", Sans-serif;
@@ -52,4 +53,11 @@
   line-height: 18px;
   letter-spacing: 1.45px;
   text-decoration: none;
+}
+
+.NavBar {
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

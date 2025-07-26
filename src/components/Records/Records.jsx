@@ -22,7 +22,6 @@ export default function RecordsUpdatePage() {
     useEffect(() => {
         const url = "https://2jdd2l8dra.execute-api.eu-west-2.amazonaws.com/prod"
         const raw = JSON.stringify({"Lift": "","Gender":recordGenderType,"WeightClass":weightClass,"Equipment":equipment});
-        console.log(raw);
         if (weightClass !== "" && equipment !== "") {
             handleGetRecords(url, raw);
         } else {

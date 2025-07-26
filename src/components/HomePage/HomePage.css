@@ -1,4 +1,88 @@
 .HomePage {
   text-align: center;
-  min-height:calc(100vh - 237px);
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.HomePage-Blurb {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.HomePage-Header {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.035px;
+}
+
+.HomePage-Header strong {
+  color: red;
+}
+
+.HomePage-Banner {
+  max-height: 700px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ParentLogos {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HomePage-WhatIsPL {
+  width: 100%;
+  background-color: #E8E8E8;
+}
+
+.HomePage-WhatIsPL-Inner {
+  text-align: center;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0 40px 0;
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.035px;
+}
+
+.HomePage-WhatIsPL-Inner strong {
+  color: red;
+}
+
+.FlipboxSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.FlipboxContainer {
+  width: 33.33%;
+  margin: 30px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-size: 30px;
+}
+
+.FlipboxFront {
+
+}
+
+.FlipboxBack {
+
+}
+
+.FlipboxImage {
+  width: 60%;
 }

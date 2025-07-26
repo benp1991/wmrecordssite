@@ -20,7 +20,11 @@ function Logout() {
   };
 
   if (authStatus !== 'authenticated') {
-    return null; // Don't render the logout button if not authenticated
+    return (
+      <div className="logout-button">
+          
+      </div>
+    );
   }
   else if (authStatus === 'authenticated') {
     return (
