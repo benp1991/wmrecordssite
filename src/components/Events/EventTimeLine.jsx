@@ -4,16 +4,26 @@ import { useState } from 'react';
 export default function EventTimeLine(){
     const numberOfEvents = eventitems.length;
     
-    const tablebodyJSX = eventitems.map((rowitem, i) =>
+    const timelineJSX = eventitems.map((rowitem, i) =>
         {
+            const eventDate = new Date(rowitem.date);
+            const entriesOpenDate = new Date(rowitem.entriesopen);
+            const entriesCloseDate = new Date(rowitem.entriesclose);
+            const guestEntryDate = new Date(rowitem.guestentry);
+            const options = {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            };
+            
             const timelineConentJSX = 
             <div>
                 <h2>{rowitem.competition}</h2>
                 <p>Entries available : {rowitem.entriesavailable}</p>
-                <p>Entries open : {rowitem.entriesopen}</p>
-                <p>Entries close : {rowitem.entriesclose}</p>
+                <p>Entries open : {entriesOpenDate.toLocaleDateString(undefined, options)}</p>
+                <p>Entries close : {entriesCloseDate.toLocaleDateString(undefined, options)}</p>
                 <p>Initally open to West Midlands Lifters Only</p>
-                <p>Guest entry : {rowitem.guestentry}</p>
+                <p>Guest entry : {guestEntryDate.toLocaleDateString(undefined, options)}</p>
                 <p>
                     To ensure a place in this and any West Midlands Competitions, please sign up and contribute through our Volunteer Program via our Linktree.<br />
                     Anyone who has volunteered at one of our competitions is entitled to early entry to a competition of their choice (please note this is for the volunteer only, not by proxy).<br />
@@ -24,7 +34,7 @@ export default function EventTimeLine(){
 
             const timelineOpConentJSX = 
             <div>
-                <h2>{rowitem.date}</h2>
+                <h2>{eventDate.toLocaleDateString(undefined, options)}</h2>
                 <p style={{whiteSpace: "pre-wrap"}}>{rowitem.location}</p>
                 <p>{rowitem.entrycost}</p>
             </div>;
@@ -62,7 +72,7 @@ export default function EventTimeLine(){
 
     return(
         <ul className="Event-Time-Line">
-            {tablebodyJSX}
+            {timelineJSX}
         </ul>
     );
 }
