@@ -1,73 +1,16 @@
 import { eventitems } from '../../static/dataitems/events';
-import { useState } from 'react';
+import TimeLineItem from './TimeLineItem';
 
 export default function EventTimeLine(){
     const numberOfEvents = eventitems.length;
     
     const timelineJSX = eventitems.map((rowitem, i) =>
         {
-            const eventDate = new Date(rowitem.date);
-            const entriesOpenDate = new Date(rowitem.entriesopen);
-            const entriesCloseDate = new Date(rowitem.entriesclose);
-            const guestEntryDate = new Date(rowitem.guestentry);
-            const options = {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-            };
-            
-            const timelineConentJSX = 
-            <div>
-                <h2>{rowitem.competition}</h2>
-                <p>Entries available : {rowitem.entriesavailable}</p>
-                <p>Entries open : {entriesOpenDate.toLocaleDateString(undefined, options)}</p>
-                <p>Entries close : {entriesCloseDate.toLocaleDateString(undefined, options)}</p>
-                <p>Initally open to West Midlands Lifters Only</p>
-                <p>Guest entry : {guestEntryDate.toLocaleDateString(undefined, options)}</p>
-                <p>
-                    To ensure a place in this and any West Midlands Competitions, please sign up and contribute through our Volunteer Program via our Linktree.<br />
-                    Anyone who has volunteered at one of our competitions is entitled to early entry to a competition of their choice (please note this is for the volunteer only, not by proxy).<br />
-                    Anyone wishing to claim priority entry must do so one week before entries open via the google form in our linktree.<br />
-                    After purchasing a ticket for one of our competitions please remember to fill out the google form linked in our linktree and the ticket as this is mandatory for all lifters.
-                </p>
-            </div>;
-
-            const timelineOpConentJSX = 
-            <div>
-                <h2>{eventDate.toLocaleDateString(undefined, options)}</h2>
-                <p style={{whiteSpace: "pre-wrap"}}>{rowitem.location}</p>
-                <p>{rowitem.entrycost}</p>
-            </div>;
-
-            const [image, setImage] = useState("");
-       
-            import(`../../static/images/eventLogos/${rowitem.logo}.png`).then(
-                (image)=> setImage(image.default)
+            return(
+                <TimeLineItem key={i} rowItem={rowitem} numberOfEvents={numberOfEvents} i={i} logo={rowitem.logo} />
             );
-
-            if (numberOfEvents === i+1){
-                return(
-                    <li className="Event-Time-Line-Item">
-                        <div className='Event-Time-Line-Item-Secondary'>{timelineOpConentJSX}</div>
-                        <div className='Event-Time-Line-Item-Separator'>
-                            <img className="Event-Time-Line-Item-Logo" src={image} />
-                        </div>
-                        <div className='Event-Time-Line-Item-Primary'>{timelineConentJSX}</div>
-                    </li>
-                )
-            } else {
-                return(
-                    <li className="Event-Time-Line-Item">
-                        <div className='Event-Time-Line-Item-Secondary'>{timelineOpConentJSX}</div>
-                        <div className='Event-Time-Line-Item-Separator'>
-                            <img className="Event-Time-Line-Item-Logo"src={image} />
-                            <span className="Event-Time-Line-Item-Connector"></span>
-                        </div>
-                        <div className='Event-Time-Line-Item-Primary'>{timelineConentJSX}</div>
-                    </li>
-                )
-            }
         }
+
     );
 
     return(

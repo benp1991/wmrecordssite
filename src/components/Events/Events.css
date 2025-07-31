@@ -14,17 +14,22 @@
 .Event-Time-Line-Item {
   list-style: none;
   display: flex;
-  position: relative;
+  flex-direction: column;
   min-height: 70px;
 }
 
-.Event-Time-Line-Item:nth-of-type(even) {
+.Event-Time-Line-Item-MainContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.Event-Time-Line-Item:nth-of-type(even) .Event-Time-Line-Item-MainContent{
   flex-direction: row-reverse;
 }
 
 .Event-Time-Line-Item-Primary {
   margin:0;
-  line-height: 1.5;
+  line-height: 1.75;
   padding: 6px 16px;
   text-align: left;
   flex:1;
@@ -36,7 +41,7 @@
 
 .Event-Time-Line-Item-Secondary {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.25;
   padding: 6px 16px;
   margin-right: auto;
   text-align: right;
@@ -62,4 +67,13 @@
 
 .Event-Time-Line-Item-Logo {
   max-width: 100px;
+}
+
+.Event-Time-Line-Item-MoreContent {
+  position: static;
+}
+
+hr.Event-Time-Line-Item-Separator {
+  border-top: 1px solid #000;
+  width: 100%;
 }
