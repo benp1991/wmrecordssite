@@ -7,10 +7,9 @@ export default function EventTimeLine(){
     const timelineJSX = eventitems.map((rowitem, i) =>
         {
             return(
-                <TimeLineItem key={i} rowItem={rowitem} numberOfEvents={numberOfEvents} i={i} logo={rowitem.logo} />
+                <TimeLineItem key={i} rowItem={rowitem} logo={rowitem.logo} />
             );
         }
-
     );
 
     return(

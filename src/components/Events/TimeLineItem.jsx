@@ -1,27 +1,18 @@
 import { useState } from 'react';
 import TimeLineContent from './TimelineContent';
 import TimeLineOppContent from './TimelineOppContent';
+import TimeLineMoreContent from './TimeLineMoreContent';
 
-export default function TimeLineItem({ key , rowItem , numberOfEvents, i, logo }) {
+export default function TimeLineItem({ key , rowItem , logo }) {
     const [isOpen, setIsOpen] = useState(false);
-
-    const timelineContentMoreJSX = 
-        <div>
-            <p>
-                To ensure a place in this and any West Midlands Competitions, please sign up and contribute through our Volunteer Program via our Linktree.<br />
-                Anyone who has volunteered at one of our competitions is entitled to early entry to a competition of their choice (please note this is for the volunteer only, not by proxy).<br />
-                Anyone wishing to claim priority entry must do so one week before entries open via the google form in our linktree.<br />
-                After purchasing a ticket for one of our competitions please remember to fill out the google form linked in our linktree and the ticket as this is mandatory for all lifters.
-            </p>
-        </div>;
-    
+   
     const [image, setImage] = useState("");
            
     import(`../../static/images/eventLogos/${logo}.png`).then(
         (image)=> setImage(image.default)
     );
     
-    let timelineConentJSX = (
+    const timelineConentJSX = (
             <div>
                 <div className='Event-Time-Line-Item-MainContent'>
                 <div className='Event-Time-Line-Item-Secondary'>
@@ -39,7 +30,7 @@ export default function TimeLineItem({ key , rowItem , numberOfEvents, i, logo }
                 <hr className="Event-Time-Line-Item-Separator"></hr>
             ) : (
                 <div className='Event-Time-Line-Item-MoreContent'>
-                    {timelineContentMoreJSX}
+                    <TimeLineMoreContent />
                     <hr className="Event-Time-Line-Item-Separator"></hr>
                 </div>
             )}

@@ -1,3 +1,23 @@
 .Results-Page {
-  min-height:calc(100vh - 216px);
+  min-height:calc(100vh - 308px);
+}
+
+.results-live-main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.cell-goodlift {
+  background-color: #0add3b;
+}
+
+.cell-badlift {
+  background-color: #e00d1e;
+}
+
+.results-live-header{
+  display: flex;
+  flex-direction: row;
+
 }

@@ -1,3 +1,7 @@
 .Contact-Page {
-  min-height:calc(100vh - 216px);
+  min-height:calc(100vh - 308px);
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

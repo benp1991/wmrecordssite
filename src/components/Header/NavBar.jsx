@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link }  from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { useGetAuthData } from '../../hooks/useGetAuthData';
