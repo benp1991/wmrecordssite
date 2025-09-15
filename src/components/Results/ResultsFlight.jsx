@@ -1,13 +1,11 @@
 import LiftCell from "./LiftCell";
 
 export default function ResultsFlight(flightdetails){
-    const tableHeaders = ['Name','Class', 'Body Weight', 'lot', 'S1','S2','S3','Best S','B1', 'B2', 'B3', 'Best B', 'D1', 'D2', 'D3', 'Best D', 'Total', 'Prognosis'];
+    const tableHeaders = ['Name','Class', 'Body Wgt', 'Lot', 'S1','S2','S3','Best S','B1', 'B2', 'B3', 'Best B', 'D1', 'D2', 'D3', 'Best D', 'Total', 'Prognosis'];
     const tableHeadersJSX = tableHeaders.map(header =>
         {
             if(header === "Name"){
                 return (<th key = {header} className="name_cell"> {header}</th>)
-            } else if(header === "Location"){
-                return (<th key = {header} className="location_cell"> {header}</th>)
             } else {
                 return (<th key = {header} className="default_cell"> {header}</th>)
             }
@@ -41,7 +39,7 @@ export default function ResultsFlight(flightdetails){
             });
 
     return(
-        <table id="LiveResults">
+        <table id="LiveResults" className="ResultsTable">
                 <thead>
                     <tr>
                         {tableHeadersJSX}

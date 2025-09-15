@@ -30,13 +30,17 @@ function NavBar() {
     ];
   }
   else {
-      navLinks = [
+      /*'navLinks = [
         {route:'Home', label:'Home'},
         {route:'Events', label:'Events'},
         {route:'Results', label:'Results'},
         {route:'Records', label:'Records'},
         {route:'Contact', label:'Contact'},
         {route:'UsefulInformation', label:'Useful Information'},
+      ];*/
+      navLinks = [
+        {route:'Results', label:'Results'},
+        {route:'Records', label:'Records'}
       ];
   }
 

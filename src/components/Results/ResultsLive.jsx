@@ -54,11 +54,13 @@ export default function ResultsLive(){
     return(
         <div className="results-live-main">
             <div className='results-live-header'>
-                <h2>{meetdetails}</h2>
-                <h2>Flight :</h2>
-                <select name="Equipment" id="Equipment" value={displayFlight} onChange={e => setDisplayFlight(e.target.value)}>
-                    {flightsJSX}
-                </select>
+                <h2 className='meet-details'>{meetdetails}</h2>
+                <div className="results-flight-selector">
+                    <h2>Flight :</h2>
+                    <select  name="Equipment" id="Equipment" value={displayFlight} onChange={e => setDisplayFlight(e.target.value)}>
+                        {flightsJSX}
+                    </select>
+                </div>
             </div>
             {resultsJSX}
         </div>
