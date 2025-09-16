@@ -17,11 +17,11 @@
     flex-direction: row;
     width: 100%;
     align-self: flex-start;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .results-live-header h2{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .results-flight-selector{
@@ -100,12 +100,8 @@
   .ResultsTable th {
     font-size: .8rem;
     font-weight: 200;
-    height: 1.2em;
   }
 
-  .ResultsTable tr, td {
-    height: 1.2em;
-  }
 
   .name_cell {
     min-width: 160px;
@@ -126,5 +122,11 @@
 }
 
 .meet-details{
-  width: 100%;
+  width: 70%;
+  display: flex;
+  
+}
+
+.meet-details h2 {
+  padding-right: 10px;
 }

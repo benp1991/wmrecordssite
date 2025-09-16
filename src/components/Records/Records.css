@@ -1,3 +1,36 @@
+@media (max-width: 767px) {
+  .Records-Page-Description {
+    border-bottom: 1px solid #333333;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+  }
+
+  .Records-Claim {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+
+  .Records-Type-Switch {
+    height: 1.4rem;
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .Records-Page-Description {
+    border-bottom: 1px solid #333333;
+    margin-bottom: 40px;
+  }
+
+  .Records-Claim {
+    font-size: 33px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+}
+
 .Records-Page {
   text-align: center;
   max-width: 1540px;
@@ -6,17 +39,9 @@
   min-height: calc(100vh - 324px);
 }
 
-.Records-Page-Description {
-  border-bottom: 1px solid #333333;
-  margin-bottom: 40px;
-}
-
 .Records-Claim {
   font-family: "Montserrat", Sans-serif;
-  font-size: 33px;
   color: #333333;
-  font-weight: 400;
-  margin-bottom: 40px;
 }
 
 .name_cell{

@@ -39,7 +39,7 @@ export default function RecordsUpdatePage() {
                 <RecordsPageDescriptionText />
                 <RecordsTypeSwitch genderType = {recordGenderType} typeSetter = {setRecordGenderType} weightClass = {weightClass} classSetter = {setWeightClass} equipment = {equipment} setEquipment = {setEquipment}/>
                 <AllRecordsTable CurrentRecords = {currentRecords}/>
-                <RecordsClaim />
+                {/*<RecordsClaim />*/}
             </div>
             <Footer />
         </div>

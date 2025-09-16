@@ -30,6 +30,25 @@
     background-color: #E8E8E8;
     padding: 16px 0px 20px 0px;
   }
+
+  th, tr, td {
+    height: 30px;
+  }
+
+  th {
+    font-size: 20px;
+  }
+
+  .record_table{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height:60px;
+  }
+
+  label, button {
+    margin-left: 40px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -52,6 +71,27 @@
     background-color: #E8E8E8;
     padding: 8px 0px 10px 0px;
   }
+
+  th, tr, td {
+    height: 1.2em;
+    font-size: 0.8rem;
+  }
+
+  th {
+    font-size: 0.8rem;
+  }
+
+  .record_table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height:30px;
+  }
+
+  label, button {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+
 }
 
 table {
@@ -61,27 +101,17 @@ table {
 }
 
 th, tr, td {
-  
   color: solid black;
-  height: 30px;
-  
 }
 
 th {
   background-color: #012d59;
   border: 1px solid white;
   color: white;
-  font-size: 20px;
 }
 td {
   text-align: center;
   border: 1px solid black;
-}
-
-.record_table{
-  margin-top: 40px;
-  margin-bottom: 40px;
-  min-height:60px;
 }
 
 .default_cell{
@@ -94,10 +124,6 @@ input, select {
   font-size: 20px;
 }
 
-label, button {
-  margin-left: 40px;
-  font-size: 20px;
-}
 button {
   background-color: #012d59;
   color: white;

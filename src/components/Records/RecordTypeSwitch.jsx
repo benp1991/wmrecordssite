@@ -27,7 +27,7 @@ export default function RecordsTypeSwitch({genderType, typeSetter, weightClass, 
     }
 
     return (
-        <div>
+        <div className="Records-Type-Switch"> 
             <p>              
                 <label htmlFor='Gender'>Gender :</label>
                 <select name="Gender" id="Gender" value={genderType} onChange={e => handleGenderChange(e.target.value, typeSetter, classSetter)}>
