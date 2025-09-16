@@ -25,21 +25,35 @@
     padding: 10px 0px 10px 0px;
     text-transform: uppercase;
   }
+
+  .Page-Header-Container {
+    background-color: #E8E8E8;
+    padding: 16px 0px 20px 0px;
+  }
 }
 
 @media (max-width: 767px) {
   .Page-Header{
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     padding: 2px 0px 2px 0px;
-    color: #b83939;
+    font-family: "Montserrat", Sans-serif;
+    color: #333333;
+    font-weight: 400;
+    max-width: 1540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .Page-Header-Container {
+    background-color: #E8E8E8;
+    padding: 8px 0px 10px 0px;
   }
 }
 
-.Page-Header-Container {
-  background-color: #E8E8E8;
-  padding: 16px 0px 20px 0px;
-}
 table {
   margin: auto;
   border-collapse: collapse;

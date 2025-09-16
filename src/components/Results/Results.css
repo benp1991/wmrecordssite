@@ -5,10 +5,116 @@
   margin-right: auto;
 }
 
-.results-live-main {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  overflow: auto;
+@media (min-width: 768px) {
+  .results-live-main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+  }
+
+  .results-live-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-self: flex-start;
+    font-size: 1rem;
+  }
+
+  .results-live-header h2{
+    font-size: 1.2rem;
+  }
+
+  .results-flight-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 30%;
+    position: relative;
+    right: 0;
+    padding: 0px 0px 0px 10px;
+    height: 1.4rem;
+    margin: 0.83em 0px 0.83em 0px;
+  }
+
+  .ResultsTable {
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+  }
+
+  .ResultsTable th {
+    font-size: .8rem;
+    font-weight: 200;
+  }
+
+  .name_cell {
+    min-width: 160px;
+  }
+
+  .default_cell {
+    min-width: 50px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .results-live-main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+  }
+
+  .results-live-header{
+    display: flex;
+    flex-direction: row;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    width: 100%;
+    align-self: flex-start;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .results-live-header h2{
+    font-size: 1rem;
+    margin: 0px;
+  }
+
+  .results-flight-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 1.4rem;
+    min-width: 30%;
+    position: relative;
+    right: 0;
+    padding: 0px 0px 0px 10px;
+  }
+
+  .ResultsTable {
+    font-size: 0.8rem;
+    font-family: Roboto, sans-serif;
+  }
+
+  .ResultsTable th {
+    font-size: .8rem;
+    font-weight: 200;
+    height: 1.2em;
+  }
+
+  .ResultsTable tr, td {
+    height: 1.2em;
+  }
+
+  .name_cell {
+    min-width: 160px;
+  }
+
+  .default_cell {
+    min-width: 45px;
+  }
+
 }
 
 .cell-goodlift {
@@ -19,46 +125,6 @@
   background-color: #e00d1e;
 }
 
-.results-live-header{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  align-self: flex-start;
-  font-size: 1rem;
-}
-
-.results-live-header h2{
-  font-size: 1rem;
-}
-
-.results-flight-selector{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  min-width: 30%;
-  position: relative;
-  right: 0;
-  padding: 0px 0px 0px 10px;
-}
-
 .meet-details{
   width: 100%;
-}
-
-.ResultsTable {
-  font-size: 1rem;
-  font-family: Roboto, sans-serif;
-}
-
-.ResultsTable th {
-  font-size: .8rem;
-  font-weight: 200;
-}
-
-.name_cell {
-  min-width: 160px;
-}
-
-.default_cell {
-  min-width: 50px;
 }
