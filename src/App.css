@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-@media not (hover: none) {
+@media (min-width: 768px) {
   .Page-Header {
     font-family: "Montserrat", Sans-serif;
     font-size: 1.8rem;
@@ -27,11 +27,12 @@
   }
 }
 
-@media (hover: none) {
+@media (max-width: 767px) {
   .Page-Header{
     font-size: 1rem;
     line-height: 1.2rem;
     padding: 2px 0px 2px 0px;
+    color: #b83939;
   }
 }
 
