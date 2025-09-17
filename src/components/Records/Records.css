@@ -1,6 +1,5 @@
 @media (max-width: 767px) {
   .Records-Page-Description {
-    border-bottom: 1px solid #333333;
     margin-bottom: 20px;
     font-size: 0.8rem;
   }
@@ -16,11 +15,21 @@
     font-size: 1rem;
   }
 
+  .Records-Page {
+    min-height: calc(100vh - 189px);
+  }
+
+  .name_cell{
+    width: 200px;
+  }
+  .location_cell{
+    width: 300px;
+  }
+
 }
 
 @media (min-width: 768px) {
   .Records-Page-Description {
-    border-bottom: 1px solid #333333;
     margin-bottom: 40px;
   }
 
@@ -29,24 +38,33 @@
     font-weight: 400;
     margin-bottom: 40px;
   }
+
+  .Records-Page {
+    min-height: calc(100vh - 304px);
+  }
+
+  .name_cell{
+    width: 300px;
+  }
+  .location_cell{
+    width: 400px;
+  }
+
 }
+
+.Records-Page-Description {
+    border-bottom: 1px solid #333333;
+  }
 
 .Records-Page {
   text-align: center;
   max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
-  min-height: calc(100vh - 324px);
+  overflow: auto;
 }
 
 .Records-Claim {
   font-family: "Montserrat", Sans-serif;
   color: #333333;
-}
-
-.name_cell{
-  width: 300px;
-}
-.location_cell{
-  width: 400px;
 }

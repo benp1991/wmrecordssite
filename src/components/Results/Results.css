@@ -1,22 +1,14 @@
-.Results-Page {
-  min-height:calc(100vh - 308px);
-  max-width: 1540px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (min-width: 768px) {
+  .Results-Page {
+    min-height:calc(100vh - 324px);
+  }
+
   .results-live-main {
     margin-top: 20px;
     margin-bottom: 20px;
-    overflow: auto;
   }
 
   .results-live-header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-self: flex-start;
     font-size: 0.8rem;
   }
 
@@ -25,13 +17,6 @@
   }
 
   .results-flight-selector{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    min-width: 30%;
-    position: relative;
-    right: 0;
     padding: 0px 0px 0px 10px;
     height: 1.4rem;
     margin: 0.83em 0px 0.83em 0px;
@@ -39,7 +24,6 @@
 
   .ResultsTable {
     font-size: 1rem;
-    font-family: Roboto, sans-serif;
   }
 
   .ResultsTable th {
@@ -58,19 +42,17 @@
 }
 
 @media (max-width: 767px) {
+  .Results-Page {
+    min-height:calc(100vh - 199px);
+  }
   .results-live-main {
     margin-top: 10px;
     margin-bottom: 10px;
-    overflow: auto;
   }
 
   .results-live-header{
-    display: flex;
-    flex-direction: row;
     height: 1.4rem;
     line-height: 1.4rem;
-    width: 100%;
-    align-self: flex-start;
     font-size: 1rem;
     margin-bottom: 5px;
   }
@@ -81,20 +63,13 @@
   }
 
   .results-flight-selector{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
     height: 1.4rem;
-    min-width: 30%;
-    position: relative;
-    right: 0;
     padding: 0px 0px 0px 10px;
+    inline-size: min-content;
   }
 
   .ResultsTable {
     font-size: 0.8rem;
-    font-family: Roboto, sans-serif;
   }
 
   .ResultsTable th {
@@ -113,6 +88,37 @@
 
 }
 
+.Results-Page {
+  max-width: 1540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-live-main {
+  overflow: auto;
+}
+
+.results-live-header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.results-flight-selector{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 30%;
+  position: relative;
+  right: 0;
+}
+
+.ResultsTable {
+  font-family: Roboto, sans-serif;
+}
+
 .cell-goodlift {
   background-color: #0add3b;
 }
@@ -124,7 +130,7 @@
 .meet-details{
   width: 70%;
   display: flex;
-  
+  min-height: 10px;
 }
 
 .meet-details h2 {
