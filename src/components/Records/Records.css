@@ -11,12 +11,12 @@
   }
 
   .Records-Type-Switch {
-    height: 1.4rem;
-    font-size: 1rem;
+    height: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .Records-Page {
-    min-height: calc(100vh - 189px);
+    min-height: calc(100vh - 202px);
   }
 
   .name_cell{
@@ -24,6 +24,10 @@
   }
   .location_cell{
     width: 300px;
+  }
+
+  .Records-Type-Switch select {
+    margin-left: 10px;
   }
 
 }
@@ -61,10 +65,12 @@
   max-width: 1540px;
   margin-left: auto;
   margin-right: auto;
-  overflow: auto;
+
 }
 
 .Records-Claim {
   font-family: "Montserrat", Sans-serif;
   color: #333333;
 }
+
+

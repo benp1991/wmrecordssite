@@ -43,6 +43,7 @@
     margin-top: 40px;
     margin-bottom: 40px;
     min-height:60px;
+    overflow: auto;
   }
 
   label, button {
@@ -88,8 +89,8 @@
   }
 
   label, button {
-    margin-left: 20px;
-    font-size: 1rem;
+    margin-left: 10px;
+    font-size: 0.8rem;
   }
 
 }
