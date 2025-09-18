@@ -28,26 +28,29 @@ export default function RecordsTypeSwitch({genderType, typeSetter, weightClass, 
 
     return (
         <div className="Records-Type-Switch"> 
-            <p>              
+            <div>              
                 <label htmlFor='Gender'>Gender :</label>
                 <select name="Gender" id="Gender" value={genderType} onChange={e => handleGenderChange(e.target.value, typeSetter, classSetter)}>
                     <option value="">Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
+            </div>
+            <div>
                 <label htmlFor='WeightClass'>Weight Class :</label>
                 <select name="WeightClass" id="WeightClass" value={weightClass} onChange={e => classSetter(e.target.value)}>
                     <option value="">Select</option>
                     {weightClasses}
                 </select>
+            </div>
+            <div>
                 <label htmlFor='Equipment'>Equipment :</label>
-            <select name="Equipment" id="Equipment" value={equipment} onChange={e => setEquipment(e.target.value)}>
-                <option value="">Select</option>
-                <option value="Sleeves">Classic</option>
-                <option value="Single Ply">Equipped</option>
-            </select>
-            </p>
-            
+                <select name="Equipment" id="Equipment" value={equipment} onChange={e => setEquipment(e.target.value)}>
+                    <option value="">Select</option>
+                    <option value="Sleeves">Classic</option>
+                    <option value="Single Ply">Equipped</option>
+                </select>
+            </div>
         </div>
     );
 }
