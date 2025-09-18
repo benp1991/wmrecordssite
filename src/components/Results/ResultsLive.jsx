@@ -19,7 +19,7 @@ export default function ResultsLive(){
         handleGetRecords(url);
         /*const intervalCall = setInterval(() => {
             handleGetRecords(url);
-        }, 5000);
+        }, 30000);
         return () => clearInterval(intervalCall);*/
     }, []);
 

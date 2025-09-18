@@ -1,7 +1,7 @@
 import React from 'react';
 
 function AllRecordsTable({CurrentRecords}) {
-    const tableHeaders = ['Equipment','Class', 'Age', 'Lift','Weight (kg)','Name','Date', 'Location'];
+    const tableHeaders = ['Age', 'Lift','Weight (kg)','Name','Date', 'Location'];
     const tableHeadersJSX = tableHeaders.map(header =>
         {
             if(header === "Name"){
@@ -35,8 +35,6 @@ function AllRecordsTable({CurrentRecords}) {
 
                 return(
                     <tr key={rowitem.Primary_Sort_Key}>
-                        <td>{Equipment}</td>
-                        <td>{rowitem.Class}</td>
                         <td>{rowitem.Age_Class}</td>
                         <td>{Lift}</td>
                         <td>{rowitem.Weight}</td>
@@ -50,8 +48,6 @@ function AllRecordsTable({CurrentRecords}) {
     } else {
         tablebodyJSX = (
             <tr>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>

@@ -45,7 +45,7 @@
     justify-content: center;
     display: flex;
     max-width: 1540px;
-    height: 50px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
     align-self: flex-start;
@@ -61,8 +61,8 @@
     font-family: "Montserrat", Sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.3rem;
-    letter-spacing: 1.45px;
+    line-height: 1.2rem;
+    letter-spacing: 1.15px;
     text-decoration: none;
   }
 

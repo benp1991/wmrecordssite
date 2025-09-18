@@ -27,7 +27,7 @@ export default function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/UsefulInformation" element={<UsefulInformation />} />
             {/* Default route to HomePage */}
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Results />} />
             <Route path="/Login" element={<Login />} />
           </Routes>
         </div>
