@@ -65,7 +65,7 @@
   .results-flight-selector{
     height: 1.4rem;
     padding: 0px 0px 0px 10px;
-    inline-size: min-content;
+    min-width: 160px;
   }
 
   .ResultsTable {
@@ -102,7 +102,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-self: flex-start;
+  align-items: centre;
 }
 
 .results-flight-selector{
@@ -110,7 +110,6 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  min-width: 30%;
   position: relative;
   right: 0;
 }
@@ -128,9 +127,10 @@
 }
 
 .meet-details{
-  width: 70%;
   display: flex;
+  flex: 1;
   min-height: 10px;
+  min-width: 350px;
 }
 
 .meet-details h2 {
