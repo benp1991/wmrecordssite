@@ -17,10 +17,10 @@ export default function ResultsLive(){
     useEffect(() => {
         const url = "https://wdc1cc3tef.execute-api.eu-west-2.amazonaws.com/dev"
         handleGetRecords(url);
-        /*const intervalCall = setInterval(() => {
+        const intervalCall = setInterval(() => {
             handleGetRecords(url);
         }, 30000);
-        return () => clearInterval(intervalCall);*/
+        return () => clearInterval(intervalCall);
     }, []);
 
     let resultsJSX = "";
