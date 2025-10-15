@@ -1,6 +1,7 @@
-import { PDFDownloadLink, Page, Text, View, Document } from '@react-pdf/renderer';
+import { PDFDownloadLink, Page, Text, View, Document , Image } from '@react-pdf/renderer';
 import createTable from './PDFTable.jsx';
 import { styles } from './PDFStyles.jsx';
+
 
 function DownloadPDFButton(props) {
     const today = new Date();
@@ -9,17 +10,17 @@ function DownloadPDFButton(props) {
     const date = today. getDate();
     const currentDate = date + "/" + month + "/" + year;
 
-    let MCRecords = props.MCPDFRecords.map(dataitem => {
+    const MCRecords = props.MCPDFRecords.map(dataitem => {
         return (
-            <View style={styles.recordset}>
+            <View style={styles.recordset} wrap={false}>
                 {createTable(dataitem.records, dataitem.weightClass)}
             </View> 
         )
     });
 
-    let FCRecords = props.FCPDFRecords.map(dataitem => {
+    const FCRecords = props.FCPDFRecords.map(dataitem => {
         return (
-            <View style={styles.recordset}>
+            <View style={styles.recordset} wrap={false}>
                 {createTable(dataitem.records, dataitem.weightClass)}
             </View> 
         )
@@ -33,6 +34,7 @@ function DownloadPDFButton(props) {
                 <Text>West Midlands Powerlifting Divisional Records - MEN - CLASSIC </Text>
                 <Text>{currentDate}</Text>
             </View>
+            <Image style={styles.recordsLogo} src={window.location.origin + "/WMpowerliftingLogo.png"}/>
             <View>
                 {MCRecords}
             </View>

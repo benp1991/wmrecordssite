@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
-import { styles , tableCellStyle , firstTableColHeaderStyle , tableColStyle } from './PDFStyles.jsx';
+import { styles } from './PDFStyles.jsx';
 
 const createTableHeader = (records , weightClass) => {
   const tableheaders = records.map(recordcol => {
@@ -14,8 +14,8 @@ const createTableHeader = (records , weightClass) => {
   
   return (
       <View style={styles.tableRowStyle} fixed>
-        <View style={firstTableColHeaderStyle}>
-          <Text>{weightClass}</Text>
+        <View style={styles.firstTableColHeaderStyle}>
+          <Text>{weightClass}kg</Text>
         </View>
         {tableheaders}
       </View>
@@ -25,12 +25,12 @@ const createTableHeader = (records , weightClass) => {
 const createTableSquatRows = (records) => {
   const tablerows = records.map(recordcol => {
       return (     
-        <View style={tableColStyle}>
-          <View style={tableCellStyle}>
-            <Text>{recordcol.squat.weight}</Text>
-            <Text>{recordcol.squat.name}</Text>
-            <Text>{recordcol.squat.date}</Text>
-            <Text>{recordcol.squat.location}</Text>
+        <View style={styles.tableColStyle}>
+          <View style={styles.tableCellStyle}>
+            <Text style={styles.recordboxtextstyle}>{recordcol.squat.weight}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.squat.name}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.squat.date}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.squat.location}</Text>
           </View>
         </View>
       )
@@ -49,12 +49,12 @@ const createTableSquatRows = (records) => {
 const createTableBenchRows = (records) => {
   const tablerows = records.map(recordcol => {
       return (     
-        <View style={tableColStyle}>
-          <View style={tableCellStyle}>
-            <Text>{recordcol.bench.weight}</Text>
-            <Text>{recordcol.bench.name}</Text>
-            <Text>{recordcol.bench.date}</Text>
-            <Text>{recordcol.bench.location}</Text>
+        <View style={styles.tableColStyle}>
+          <View style={styles.tableCellStyle}>
+            <Text style={styles.recordboxtextstyle}>{recordcol.bench.weight}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.bench.name}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.bench.date}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.bench.location}</Text>
           </View>
         </View>
       )
@@ -73,12 +73,12 @@ const createTableBenchRows = (records) => {
 const createTableDeadRows = (records) => {
   const tablerows = records.map(recordcol => {
       return (     
-        <View style={tableColStyle}>
-          <View style={tableCellStyle}>
-            <Text>{recordcol.deadlift.weight}</Text>
-            <Text>{recordcol.deadlift.name}</Text>
-            <Text>{recordcol.deadlift.date}</Text>
-            <Text>{recordcol.deadlift.location}</Text>
+        <View style={styles.tableColStyle}>
+          <View style={styles.tableCellStyle}>
+            <Text style={styles.recordboxtextstyle}>{recordcol.deadlift.weight}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.deadlift.name}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.deadlift.date}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.deadlift.location}</Text>
           </View>
         </View>
       )
@@ -93,6 +93,52 @@ const createTableDeadRows = (records) => {
     );
 };
 
+const createTableTotalRows = (records) => {
+  const tablerows = records.map(recordcol => {
+      return (     
+        <View style={styles.tableColStyle}>
+          <View style={styles.tableCellStyle}>
+            <Text style={styles.recordboxtextstyle}>{recordcol.total.weight}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.total.name}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.total.date}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.total.location}</Text>
+          </View>
+        </View>
+      )
+  });
+    return (
+      <View style={styles.tableRowStyle}>
+        <View style={styles.firstTableColStyle}>
+          <Text style={styles.firstColTextStyle}>Total</Text>
+        </View>
+        {tablerows}
+      </View>
+    );
+};
+
+const createTableBenchACRows = (records) => {
+  const tablerows = records.map(recordcol => {
+      return (     
+        <View style={styles.tableColStyle}>
+          <View style={styles.tableCellStyle}>
+            <Text style={styles.recordboxtextstyle}>{recordcol.benchac.weight}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.benchac.name}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.benchac.date}</Text>
+            <Text style={styles.recordboxtextstyle}>{recordcol.benchac.location}</Text>
+          </View>
+        </View>
+      )
+  });
+    return (
+      <View style={styles.tableRowStyle}>
+        <View style={styles.firstTableColStyle}>
+          <Text style={styles.firstColTextStyle}>Bench A/C</Text>
+        </View>
+        {tablerows}
+      </View>
+    );
+};
+
 const createTable = (records, weightClass) => {
   return (
     <View style={styles.tableStyle}>
@@ -100,6 +146,8 @@ const createTable = (records, weightClass) => {
       {createTableSquatRows(records)}
       {createTableBenchRows(records)}
       {createTableDeadRows(records)}
+      {createTableTotalRows(records)}
+      {createTableBenchACRows(records)}
     </View>
   )
 }
