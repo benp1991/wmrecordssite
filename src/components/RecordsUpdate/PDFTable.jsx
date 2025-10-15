@@ -1,125 +1,107 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
+import { styles , tableCellStyle , firstTableColHeaderStyle , tableColStyle } from './PDFStyles.jsx';
 
-const createTableHeader = (records) => {
+const createTableHeader = (records , weightClass) => {
   const tableheaders = records.map(recordcol => {
       return (
-        <View style={firstTableColHeaderStyle}>
-          <Text style={tableCellHeaderStyle}>{recordcol.age}</Text>
+        <View style={styles.tableColHeaderStyle}>
+          <Text>{recordcol.age}</Text>
         </View>
           
       )
   });
   
   return (
-      <View style={tableRowStyle} fixed>
+      <View style={styles.tableRowStyle} fixed>
+        <View style={firstTableColHeaderStyle}>
+          <Text>{weightClass}</Text>
+        </View>
         {tableheaders}
       </View>
     );
 };
 
-const createTableRows = (records) => {
+const createTableSquatRows = (records) => {
   const tablerows = records.map(recordcol => {
-      return (
-        <View style={firstTableColHeaderStyle}>
-          <Text style={tableCellHeaderStyle}>{recordcol.age}</Text>
+      return (     
+        <View style={tableColStyle}>
+          <View style={tableCellStyle}>
+            <Text>{recordcol.squat.weight}</Text>
+            <Text>{recordcol.squat.name}</Text>
+            <Text>{recordcol.squat.date}</Text>
+            <Text>{recordcol.squat.location}</Text>
+          </View>
         </View>
-          
       )
   });
     return (
-      <View style={tableRowStyle}>
-
-        <View style={firstTableColStyle}>
-          <Text style={tableCellStyle}>Element</Text>
+      <View style={styles.tableRowStyle}>
+        <View style={styles.firstTableColStyle}>
+          <Text style={styles.firstColTextStyle}>Squat</Text>
         </View>
-
-        <View style={tableColStyle}>
-          <Text style={tableCellStyle}>Element</Text>
-        </View>
-
-        <View style={tableColStyle}>
-          <Text style={tableCellStyle}>Element</Text>
-        </View>
-
-        <View style={tableColStyle}>
-          <Text style={tableCellStyle}>Element</Text>
-        </View>
-
-        <View style={tableColStyle}>
-          <Text style={tableCellStyle}>Element</Text>
-        </View>
+        {tablerows}
 
       </View>
     );
 };
 
-const createTable = (records) => {
+const createTableBenchRows = (records) => {
+  const tablerows = records.map(recordcol => {
+      return (     
+        <View style={tableColStyle}>
+          <View style={tableCellStyle}>
+            <Text>{recordcol.bench.weight}</Text>
+            <Text>{recordcol.bench.name}</Text>
+            <Text>{recordcol.bench.date}</Text>
+            <Text>{recordcol.bench.location}</Text>
+          </View>
+        </View>
+      )
+  });
+    return (
+      <View style={styles.tableRowStyle}>
+        <View style={styles.firstTableColStyle}>
+          <Text style={styles.firstColTextStyle}>Bench</Text>
+        </View>
+        {tablerows}
+
+      </View>
+    );
+};
+
+const createTableDeadRows = (records) => {
+  const tablerows = records.map(recordcol => {
+      return (     
+        <View style={tableColStyle}>
+          <View style={tableCellStyle}>
+            <Text>{recordcol.deadlift.weight}</Text>
+            <Text>{recordcol.deadlift.name}</Text>
+            <Text>{recordcol.deadlift.date}</Text>
+            <Text>{recordcol.deadlift.location}</Text>
+          </View>
+        </View>
+      )
+  });
+    return (
+      <View style={styles.tableRowStyle}>
+        <View style={styles.firstTableColStyle}>
+          <Text style={styles.firstColTextStyle}>Deadlift</Text>
+        </View>
+        {tablerows}
+      </View>
+    );
+};
+
+const createTable = (records, weightClass) => {
   return (
-    <View style={tableStyle}>
-      {createTableHeader(records)}
-      {createTableRows()}
+    <View style={styles.tableStyle}>
+      {createTableHeader(records, weightClass)}
+      {createTableSquatRows(records)}
+      {createTableBenchRows(records)}
+      {createTableDeadRows(records)}
     </View>
   )
 }
-
-
-const tableStyle = {
-  display: "table",
-  width: "auto"
-}
-
-const tableRowStyle = {
-  flexDirection: "row",
-};
-
-const tableColHeaderStyle = {
-  width: "20%",
-  borderStyle: "solid",
-  borderColor: "#000",
-  borderBottomColor: "#000",
-  borderWidth: 1,
-  borderLeftWidth: 0,
-  backgroundColor: "#bdbdbd"
-};
-
-const tableCellStyle = {
-  textAlign: "center",
-  margin: 5,
-  fontSize: 10
-};
-
-const firstTableColHeaderStyle = {
-  width: "20%",
-  borderStyle: "solid",
-  borderColor: "#000",
-  borderBottomColor: "#000",
-  borderWidth: 1,
-  backgroundColor: "#bdbdbd"
-};
-
-const firstTableColStyle = {
-  width: "20%",
-  borderStyle: "solid",
-  borderColor: "#000",
-  borderWidth: 1,
-  borderTopWidth: 0
-};
-
-const tableColStyle = {
-  width: "20%",
-  borderStyle: "solid",
-  borderColor: "#000",
-  borderWidth: 1,
-  borderLeftWidth: 0,
-  borderTopWidth: 0
-};
-
-const tableCellHeaderStyle = {
-  textAlign: "center",
-  margin: 4,
-  fontSize: 12,
-  fontWeight: "bold"
-};
 
 export default createTable;
